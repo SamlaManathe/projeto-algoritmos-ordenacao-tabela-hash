@@ -9,6 +9,16 @@ int main() {
     inicializar_tabela(tabela);
 
     printf("Tabela Hash inicializada com sucesso!\n");
+
+    printf("%d\n",calcular_hash(123));
+
+    printf("Índice calculado com sucesso!\n");
+
+    liberar_tabela(tabela);
+
+    printf("Tabela Hash inicializada com sucesso!\n");
+
+    getchar();
     
     return 0;
 }

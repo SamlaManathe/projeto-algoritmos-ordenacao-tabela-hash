@@ -20,4 +20,8 @@ typedef struct No {
 
 void inicializar_tabela(No* tabela[]);
 
+int calcular_hash(int matricula);
+
+void liberar_tabela(No* tabela[]);
+
 #endif
