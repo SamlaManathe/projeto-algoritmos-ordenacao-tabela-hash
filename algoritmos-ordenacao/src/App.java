@@ -8,27 +8,61 @@ import ed2.projeto.algoritmosordenacao.Utils;
 
 public class App {
     public static void main(String[] args) {
-        int[] vetorOriginal = Utils.gerarVetor(10, 1000);
 
-        System.out.print("\nVetor original:");
+        int TAMANHO_VETOR = 10;
+        int LIMITE_SUPERIOR = 1000;
+
+        int[] vetorOriginal = Utils.gerarVetor(TAMANHO_VETOR, LIMITE_SUPERIOR);
+
+        System.out.print("Vetor Original:\n");
         Utils.imprimirVetor(vetorOriginal);
         System.out.println();
 
-        IAlgoritmoOrdenacao[] algoritmos = {
-            new BubbleSort(),
-            new InsertionSort(),
-            new MergeSort(),
-            new QuickSort(),
-            new SelectionSort()
-        };
+        // IMPORTANTE: Separar cada um abaixo em opções do menu feito com switch case
 
-        for (IAlgoritmoOrdenacao algoritmo : algoritmos) {
-            int[] vetorOrdenado = vetorOriginal.clone();
-            algoritmo.ordenarVetor(vetorOrdenado);
+        // Bubble Sort
+        IAlgoritmoOrdenacao bubbleSort = new BubbleSort();
+        int[] vetorBubble = vetorOriginal.clone();
+        bubbleSort.ordenarVetor(vetorBubble);
 
-            System.out.print(algoritmo + ":");
-            Utils.imprimirVetor(vetorOrdenado);
-            System.out.println();
-        }
+        System.out.print("\nBubble Sort:\n");
+        Utils.imprimirVetor(vetorBubble);
+        System.out.println();
+
+        // Insertion Sort
+        IAlgoritmoOrdenacao insertionSort = new InsertionSort();
+        int[] vetorInsertion = vetorOriginal.clone();
+        insertionSort.ordenarVetor(vetorInsertion);
+
+        System.out.print("\nInsertion Sort:\n");
+        Utils.imprimirVetor(vetorInsertion);
+        System.out.println();
+
+        // Merge Sort
+        IAlgoritmoOrdenacao mergeSort = new MergeSort();
+        int[] vetorMerge = vetorOriginal.clone();
+        mergeSort.ordenarVetor(vetorMerge);
+
+        System.out.print("\nMerge Sort:\n");
+        Utils.imprimirVetor(vetorMerge);
+        System.out.println();
+
+        // Quick Sort
+        IAlgoritmoOrdenacao quickSort = new QuickSort();
+        int[] vetorQuick = vetorOriginal.clone();
+        quickSort.ordenarVetor(vetorQuick);
+
+        System.out.print("\nQuick Sort:\n");
+        Utils.imprimirVetor(vetorQuick);
+        System.out.println();
+
+        // Selection Sort
+        IAlgoritmoOrdenacao selectionSort = new SelectionSort();
+        int[] vetorSelection = vetorOriginal.clone();
+        selectionSort.ordenarVetor(vetorSelection);
+
+        System.out.print("\nSelection Sort:\n");
+        Utils.imprimirVetor(vetorSelection);
+        System.out.println();
     }
 }

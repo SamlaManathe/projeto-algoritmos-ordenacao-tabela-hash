@@ -20,7 +20,7 @@ public class Utils {
   
   public static void imprimirVetor(int[] vetor) {
 	
-	System.out.print( "  Vetor = {" );
+	  System.out.print( "  Vetor = {" );
 	  
     for(int i = 0; i < vetor.length; i++) {
     	
@@ -40,17 +40,19 @@ public class Utils {
 
   public static int[] gerarVetor(int tamanhoVetor, int limiteSuperior) {
 	
-	Random random = new Random();
+	  Random random = new Random();
 	
-	int[] vetor = new int[tamanhoVetor];
+	  int[] vetor = new int[tamanhoVetor];
 	
     for(int i = 0; i < tamanhoVetor; i++) {
 	    	
-	  int numero = random.nextInt( limiteSuperior );
+	    int numero = random.nextInt( limiteSuperior );
 	 
-	  vetor[i] = numero;
+	    vetor[i] = numero;
 	  
     } // FOR VETOR
+
+    System.out.println();
 	    
     return vetor;
     
