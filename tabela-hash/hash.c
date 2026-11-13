@@ -1,21 +1,20 @@
-#include "hash.h"
-#include <stdlib.h>
+#include <stdio.h>
+#include "hash.h" 
 
-void inicializar_tabela(No* tabela[]) {
-  int i;
-  for(i = 0; i < TAMANHO_TABELA; i++){
-    tabela[i] = NULL;
-  }
-}
-
-int calcular_hash(int matricula) {
-  return matricula % TAMANHO_TABELA;
-}
-
-void liberar_tabela(No* tabela[]) {
-  int i;
-  for(i = 0; i < TAMANHO_TABELA; i++) {
-    free(tabela[i]);
-  }
+void exibir_tabela(Node* tabela[]) {
+    for (int i = 0; i < TAMANHO_TABELA; i++) {
+        
+        printf("[%02d]: ", i);
+        
+        
+        Node* atual = tabela[i];
+        
+        
+        while (atual != NULL) {
+            printf("[Matrícula: %d | Nome: %s | Idade: %d] -> ", atual->matricula, atual->nome, atual->idade);
+            atual = atual->proximo;
+        }
+        printf("NULL\n");
+    }
 }
 
