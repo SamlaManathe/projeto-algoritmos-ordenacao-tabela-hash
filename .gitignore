@@ -1,0 +1,39 @@
+# ==========================================
+# Regras para Java (VS Code / Padrão)
+# ==========================================
+
+# Arquivos compilados do Java
+*.class
+*.jar
+*.war
+*.ear
+
+# Pastas de build e temporários do VS Code para Java
+.bin/
+bin/
+obj/
+dist/
+target/
+.cr/
+
+# Configurações locais do VS Code (opcional, remova se quiser compartilhar extensões)
+.vscode/
+
+# ==========================================
+# Regras para C (Compiladores GCC/Clang)
+# ==========================================
+
+# Arquivos objeto compilados
+*.o
+*.obj
+
+# Arquivos de biblioteca e despejo
+*.a
+*.lib
+*.out
+
+# Arquivos executáveis gerados em C (Windows e Linux/Mac)
+*.exe
+*.out
+*.app
+

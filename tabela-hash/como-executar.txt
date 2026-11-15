@@ -1,0 +1,7 @@
+Código para compilar o executável:
+  gcc main.c hash.c hash.h -o hash.exe
+
+Código para executar o .exe:
+  ./hash.exe
+
+(Tudo isso deve ser executado no terminal no diretório da "tabela-hash");
