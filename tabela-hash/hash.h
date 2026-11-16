@@ -22,6 +22,8 @@ void inicializar_tabela(No* tabela[]);
 
 int calcular_hash(int matricula);
 
+No* buscar_aluno(No* tabela[], int matricula);
+
 void liberar_tabela(No* tabela[]);
 
 #endif
