@@ -17,14 +17,14 @@ public static void main(String[] args) {
         do {
             System.out.println("\n=========================================");
             System.out.println("   MENU PRINCIPAL - ORDENAÇÃO DE DADOS   ");
-            System.out.println("=========================================");
+            System.out.println("=========================================\n");
             System.out.println("1 - Bubble Sort");
             System.out.println("2 - Insertion Sort");
             System.out.println("3 - Selection Sort");
             System.out.println("4 - Merge Sort");
             System.out.println("5 - Quick Sort");
             System.out.println("6 - Sair do programa");
-            System.out.print("Escolha uma opção: ");
+            System.out.print("\nEscolha uma opção: ");
 
             
             if (!scanner.hasNextInt()) {
@@ -60,7 +60,7 @@ public static void main(String[] args) {
                     nomeAlgoritmo = "Quick Sort";
                     break;
                 case 6:
-                    System.out.println("\nA encerrar o programa... Até logo!");
+                    System.out.println("\nA encerrar o programa... Até logo!\n");
                     break;
                 default:
                     System.out.println("\n[ERRO] Opção inválida! Escolha um número entre 1 e 6.");
