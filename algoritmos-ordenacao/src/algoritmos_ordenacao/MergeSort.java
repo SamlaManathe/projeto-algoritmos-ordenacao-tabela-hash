@@ -1,5 +1,6 @@
+package algoritmos_ordenacao;
 
-package ed2.projeto.algoritmosordenacao;
+import interfaces.IAlgoritmoOrdenacao;
 
 /**
  * 
