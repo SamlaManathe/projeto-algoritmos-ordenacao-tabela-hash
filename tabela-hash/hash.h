@@ -24,6 +24,8 @@ int calcular_hash(int matricula);
 
 int inserir_aluno(No* tabela[], int matricula, const char* nome, int idade);
 
+int remover_aluno(No* tabela[], int matricula);
+
 void liberar_tabela(No* tabela[]);
 
 #endif

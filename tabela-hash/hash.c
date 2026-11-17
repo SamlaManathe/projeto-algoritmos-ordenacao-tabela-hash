@@ -79,6 +79,34 @@ int inserir_aluno(No* tabela[], int matricula, const char* nome, int idade) {
     return 1;
 }
 
+int remover_aluno(No* tabela[], int matricula) {
+    int indice = calcular_hash(matricula);
+
+    No* atual = tabela[indice];
+    No* anterior = NULL;
+
+    while(atual != NULL) {
+        if(atual->aluno.matricula == matricula) {
+
+            if(anterior == NULL) {
+                tabela[indice] = atual->prox;
+            }
+            else {
+                anterior->prox = atual->prox;
+            }
+
+            free(atual);
+
+            return 1;
+        }
+
+        anterior = atual;
+        atual = atual->prox;
+    }
+
+    return 0;
+}
+
 void liberar_tabela(No* tabela[]) {
     int i;
 
