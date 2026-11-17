@@ -47,7 +47,7 @@ public class Utils {
     if (tamanhoTotal > LIMITE_EXIBICAO) {
       System.out.print(", ...");
     }
-    System.out.print
+    System.out.print("}");
   }
 
   public static int[] gerarVetor(int tamanhoVetor, int limiteSuperior) {
