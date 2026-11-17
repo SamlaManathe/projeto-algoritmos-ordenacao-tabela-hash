@@ -1,4 +1,4 @@
-package ed2.projeto.algoritmosordenacao;
+package interfaces;
 
 public interface IAlgoritmoOrdenacao {
 

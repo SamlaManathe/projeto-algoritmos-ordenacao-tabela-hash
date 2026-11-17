@@ -1,10 +1,6 @@
-import ed2.projeto.algoritmosordenacao.BubbleSort;
-import ed2.projeto.algoritmosordenacao.IAlgoritmoOrdenacao;
-import ed2.projeto.algoritmosordenacao.InsertionSort;
-import ed2.projeto.algoritmosordenacao.MergeSort;
-import ed2.projeto.algoritmosordenacao.QuickSort;
-import ed2.projeto.algoritmosordenacao.SelectionSort;
-import ed2.projeto.algoritmosordenacao.Utils;
+import interfaces.IAlgoritmoOrdenacao;
+import utils.Utils;
+import algoritmos_ordenacao.*;
 
 public class App {
     public static void main(String[] args) {
