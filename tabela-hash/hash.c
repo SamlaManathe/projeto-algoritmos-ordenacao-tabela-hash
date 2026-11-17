@@ -11,7 +11,7 @@ void exibir_tabela(No* tabela[]) {
         
         
         while (atual != NULL) {
-            printf("[Matrícula: %d | Nome: %s | Idade: %d] -> ", atual->matricula, atual->nome, atual->idade);
+            printf("[Matrícula: %d | Nome: %s | Idade: %d] -> ", atual->aluno.matricula, atual->aluno.nome, atual->aluno.idade);
             atual = atual->prox;
         }
         printf("NULL\n");
