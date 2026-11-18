@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include "hash.h" 
 
+/*=============================================
+            TAINARA - EXIBIR TABELA
+==============================================*/
+
 void exibir_tabela(No* tabela[]) {
     for (int i = 0; i < TAMANHO_TABELA; i++) {
         
@@ -18,6 +22,10 @@ void exibir_tabela(No* tabela[]) {
     }
 }
 
+/*=============================================
+          DANIEL - INICIALIZAR TABELA
+==============================================*/
+
 void inicializar_tabela(No* tabela[]) {
     int i;
 
@@ -26,9 +34,17 @@ void inicializar_tabela(No* tabela[]) {
     }
 }
 
+/*=============================================
+             SAMLA - CALCULAR HASH
+==============================================*/
+
 int calcular_hash(int matricula) {
     return matricula % TAMANHO_TABELA;
 }
+
+/*=============================================
+   ARTUR - INSERÇÃO DE ALUNO COM ENCADEAMENTO
+==============================================*/
 
 int inserir_aluno(No* tabela[], int matricula, const char* nome, int idade) {
 
@@ -79,6 +95,10 @@ int inserir_aluno(No* tabela[], int matricula, const char* nome, int idade) {
     return 1;
 }
 
+/*=============================================
+    SAMUEL - REMOÇÃO DE ALUNO POR MATRÍCULA
+==============================================*/
+
 int remover_aluno(No* tabela[], int matricula) {
     int indice = calcular_hash(matricula);
 
@@ -106,6 +126,10 @@ int remover_aluno(No* tabela[], int matricula) {
 
     return 0;
 }
+
+/*=============================================
+            SAMLA - LIBERAR TABELA
+==============================================*/
 
 void liberar_tabela(No* tabela[]) {
     int i;

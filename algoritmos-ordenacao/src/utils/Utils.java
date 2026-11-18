@@ -17,6 +17,10 @@ public class Utils {
   }
   
   // Métodos
+
+  /*=============================================
+              DANIEL - IMPRIMIR VETORES
+  ==============================================*/
   
   public static void imprimirVetor(int[] vetor) {
     
@@ -50,6 +54,10 @@ public class Utils {
     System.out.print("}");
   }
 
+  /*=============================================
+                SAMLA - GERAR VETOR
+  ==============================================*/
+  
   public static int[] gerarVetor(int tamanhoVetor, int limiteSuperior) {
 	
 	  Random random = new Random();
