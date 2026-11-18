@@ -4,6 +4,11 @@
 #include <string.h>
 #include "hash.h"
 
+/*===============================================
+PAULO - FUNÇÕES AUXILIARES PARA LEITURA DE DADOS
+      (ALUNO) INSERIR, BUSCAR E REMOVER
+================================================*/
+
 // Declaracao da funcao existente em hash.c
 void exibir_tabela(No* tabela[]);
 
@@ -28,13 +33,14 @@ int ler_inteiro(const char* mensagem, int* valor) {
 
 // Exibe o menu
 void exibir_menu() {
-    printf("\n========== MENU TABELA HASH ==========\n");
+    printf("\n==========================================================================\n");
+    printf("                      MENU PRINCIPAL - TABELA HASH   ");
+    printf("\n==========================================================================\n\n");
     printf("1 - Inserir novo Aluno\n");
     printf("2 - Buscar Aluno\n");
     printf("3 - Remover Aluno\n");
     printf("4 - Exibir Tabela Hash\n");
     printf("5 - Encerrar Sistema\n");
-    printf("======================================\n");
 }
 
 // Insere um aluno
@@ -42,7 +48,7 @@ void acao_inserir(No* tabela[]) {
     int matricula, idade;
     char nome[100];
 
-    if (!ler_inteiro("Digite a matricula: ", &matricula) || matricula < 0) {
+    if (!ler_inteiro("\nDigite a matricula: ", &matricula) || matricula < 0) {
         printf("Matricula invalida!\n");
         return;
     }
@@ -65,9 +71,9 @@ void acao_inserir(No* tabela[]) {
     }
 
     if (inserir_aluno(tabela, matricula, nome, idade)) {
-        printf("Aluno cadastrado com sucesso!\n");
+        printf("\nAluno cadastrado com sucesso!\n");
     } else {
-        printf("Erro: matricula ja cadastrada ou dados invalidos!\n");
+        printf("\nErro: matricula ja cadastrada ou dados invalidos!\n");
     }
 }
 
@@ -75,8 +81,8 @@ void acao_inserir(No* tabela[]) {
 void acao_buscar(No* tabela[]) {
     int matricula;
 
-    if (!ler_inteiro("Digite a matricula: ", &matricula) || matricula < 0) {
-        printf("Matricula invalida!\n");
+    if (!ler_inteiro("\nDigite a matricula: ", &matricula) || matricula < 0) {
+        printf("\nMatricula invalida!\n");
         return;
     }
 
@@ -86,7 +92,7 @@ void acao_buscar(No* tabela[]) {
     while (atual != NULL) {
         if (atual->aluno.matricula == matricula) {
             printf("\nAluno encontrado!\n");
-            printf("Matricula: %d\n", atual->aluno.matricula);
+            printf("\nMatricula: %d\n", atual->aluno.matricula);
             printf("Nome: %s\n", atual->aluno.nome);
             printf("Idade: %d\n", atual->aluno.idade);
             return;
@@ -102,17 +108,21 @@ void acao_buscar(No* tabela[]) {
 void acao_remover(No* tabela[]) {
     int matricula;
 
-    if (!ler_inteiro("Digite a matricula: ", &matricula) || matricula < 0) {
-        printf("Matricula invalida!\n");
+    if (!ler_inteiro("\nDigite a matricula: ", &matricula) || matricula < 0) {
+        printf("\nMatricula invalida!\n");
         return;
     }
 
     if (remover_aluno(tabela, matricula)) {
-        printf("Aluno removido com sucesso!\n");
+        printf("\nAluno removido com sucesso!\n");
     } else {
-        printf("Aluno nao encontrado!\n");
+        printf("\nAluno nao encontrado!\n");
     }
 }
+
+/*=============================================
+                PAULO - MENU
+==============================================*/
 
 // Funcao principal
 int main() {
@@ -124,36 +134,70 @@ int main() {
     do {
         exibir_menu();
 
-        if (!ler_inteiro("Escolha uma opcao: ", &opcao)) {
+        if (!ler_inteiro("\nEscolha uma opcao: ", &opcao)) {
             printf("Entrada invalida!\n");
             opcao = 0;
             continue;
         }
 
+        if(opcao != 5){
+            printf("\n==========================================================================\n");
+            getchar();
+            system("clear");
+        }
+
         switch (opcao) {
             case 1:
+                printf("\n==========================================================================\n");
+                printf("                      INSERIR ALUNO - TABELA HASH   ");
+                printf("\n==========================================================================\n");
                 acao_inserir(tabela);
+                printf("\n==========================================================================\n");
+                getchar();
+                system("clear");
                 break;
 
             case 2:
+                printf("\n==========================================================================\n");
+                printf("                      BUSCAR ALUNO - TABELA HASH   ");
+                printf("\n==========================================================================\n");
                 acao_buscar(tabela);
+                printf("\n==========================================================================\n");
+                getchar();
+                system("clear");
                 break;
 
             case 3:
+                printf("\n==========================================================================\n");
+                printf("                      REMOVER ALUNO - TABELA HASH   ");
+                printf("\n==========================================================================\n");
                 acao_remover(tabela);
+                printf("\n==========================================================================\n");
+                getchar();
+                system("clear");
                 break;
 
             case 4:
+                printf("\n==========================================================================\n");
+                printf("                             EXIBIR TABELA HASH   ");
+                printf("\n==========================================================================\n\n");
                 exibir_tabela(tabela);
+                printf("\n==========================================================================\n");
+                getchar();
+                system("clear");
                 break;
 
             case 5:
+                printf("\n==========================================================================\n");
+                printf("                             SISTEMA ENCERRADO");
+                printf("\n==========================================================================\n");
                 liberar_tabela(tabela);
-                printf("Sistema encerrado!\n");
+                getchar();
+                system("clear");
                 break;
 
             default:
-                printf("Opcao invalida! Escolha de 1 a 5.\n");
+                printf("\nOpção inválida! Escolha de 1 a 5.\n");
         }
 
     } while (opcao != 5);

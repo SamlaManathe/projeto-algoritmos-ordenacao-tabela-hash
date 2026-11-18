@@ -7,6 +7,10 @@
 
 #define TAMANHO_TABELA 11
 
+/*=============================================
+         DANIEL - STRUCTS E CABEÇALHOS
+==============================================*/
+
 typedef struct {
     int matricula;
     char nome[100];

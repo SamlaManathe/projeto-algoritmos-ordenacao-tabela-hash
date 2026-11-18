@@ -1,10 +1,15 @@
-import interfaces.IAlgoritmoOrdenacao;
-import utils.Utils;
 import algoritmos_ordenacao.*;
+import interfaces.IAlgoritmoOrdenacao;
 import java.util.Scanner;
+import utils.Utils;
 
 public class App {
-public static void main(String[] args) {
+
+/*=============================================
+                TAINARA - MENU
+==============================================*/
+
+public static void main(String[] args) {         
         Scanner scanner = new Scanner(System.in);
         int opcao = 0;
 
@@ -15,9 +20,9 @@ public static void main(String[] args) {
         int[] vetorOriginal = Utils.gerarVetor(TAMANHO_VETOR, LIMITE_SUPERIOR);
 
         do {
-            System.out.println("\n=========================================");
-            System.out.println("   MENU PRINCIPAL - ORDENAÇÃO DE DADOS   ");
-            System.out.println("=========================================\n");
+            System.out.println("\n==========================================================================");
+            System.out.println("                  MENU PRINCIPAL - ORDENAÇÃO DE DADOS   ");
+            System.out.println("==========================================================================\n");
             System.out.println("1 - Bubble Sort");
             System.out.println("2 - Insertion Sort");
             System.out.println("3 - Selection Sort");
@@ -42,7 +47,6 @@ public static void main(String[] args) {
                 case 1:
                     algoritmo = new BubbleSort();
                     nomeAlgoritmo = "Bubble Sort";
-                    break;
                 case 2:
                     algoritmo = new InsertionSort();
                     nomeAlgoritmo = "Insertion Sort";
@@ -61,6 +65,9 @@ public static void main(String[] args) {
                     break;
                 case 6:
                     System.out.println("\nA encerrar o programa... Até logo!\n");
+                    System.out.println("==========================================================================");
+                    System.out.println("                                ENCERRADO   ");
+                    System.out.println("==========================================================================\n");
                     break;
                 default:
                     System.out.println("\n[ERRO] Opção inválida! Escolha um número entre 1 e 6.");
