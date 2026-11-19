@@ -6,7 +6,6 @@
 
 /*===============================================
 PAULO - FUNÇÕES AUXILIARES PARA LEITURA DE DADOS
-      (ALUNO) INSERIR, BUSCAR E REMOVER
 ================================================*/
 
 // Declaracao da funcao existente em hash.c
@@ -43,6 +42,10 @@ void exibir_menu() {
     printf("5 - Encerrar Sistema\n");
 }
 
+/*===============================================
+             PAULO - INSERIR UM ALUNO
+================================================*/
+
 // Insere um aluno
 void acao_inserir(No* tabela[]) {
     int matricula, idade;
@@ -77,6 +80,10 @@ void acao_inserir(No* tabela[]) {
     }
 }
 
+/*===============================================
+             SAMUEL - BUSCAR ALUNO
+================================================*/
+
 // Busca um aluno
 void acao_buscar(No* tabela[]) {
     int matricula;
@@ -104,19 +111,23 @@ void acao_buscar(No* tabela[]) {
     printf("Aluno nao encontrado!\n");
 }
 
+/*===============================================
+             SAMUEL - REMOVER ALUNO
+================================================*/
+
 // Remove um aluno
 void acao_remover(No* tabela[]) {
     int matricula;
 
     if (!ler_inteiro("\nDigite a matricula: ", &matricula) || matricula < 0) {
-        printf("\nMatricula invalida!\n");
+        printf("\nMatricula inválida!\n");
         return;
     }
 
     if (remover_aluno(tabela, matricula)) {
         printf("\nAluno removido com sucesso!\n");
     } else {
-        printf("\nAluno nao encontrado!\n");
+        printf("\nAluno não encontrado!\n");
     }
 }
 

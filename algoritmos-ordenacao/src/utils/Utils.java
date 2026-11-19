@@ -34,7 +34,7 @@ public class Utils {
     int limite = Math.min(tamanhoTotal, LIMITE_EXIBICAO);
 
     if (tamanhoTotal > LIMITE_EXIBICAO) {
-      System.out.println("Aviso: exibindo apenas os primeiros " + LIMITE_EXIBICAO + " elementos (total: " + tamanhoTotal + ").");
+      System.out.println("\nAviso: exibindo apenas os primeiros " + LIMITE_EXIBICAO + " elementos (total: " + tamanhoTotal + ").\n");
     }
 
     System.out.print("Vetor = {");

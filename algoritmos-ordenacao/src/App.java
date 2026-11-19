@@ -14,7 +14,7 @@ public static void main(String[] args) {
         int opcao = 0;
 
         int TAMANHO_VETOR = 10;
-        int LIMITE_SUPERIOR = 1000;
+        int LIMITE_SUPERIOR = 10;
 
         
         int[] vetorOriginal = Utils.gerarVetor(TAMANHO_VETOR, LIMITE_SUPERIOR);
